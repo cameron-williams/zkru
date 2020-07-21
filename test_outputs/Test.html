@@ -1,0 +1,33 @@
+<h1>Emerge</h1>
+
+Emerge is gentoo's package manager. It is much more in depth than other package managers as instead of installing pre build binaries, we are building our own for our system.
+
+Below are some important things to know about Emerge.
+
+
+
+<h4>Package Licenses</h4>
+
+Since not all packages have the same license (proprietary stuff eg has license saying you can't use it for anything etc) emerge provides <code>/etc/portage/package.license</code>
+This file holds exceptions for licenses for specific packages you want to download. For example the <code>net-im/discord-bin</code> package requires the all-rights-reserved license, so before we can download it on our system we would have to add the following to the package.license file:
+<code>net-im/discord-bin all-rights-reserved</code>
+
+Any other packages we need to add get the same <code>package-name license-name</code> format.
+
+
+<h3>Packages</h3>
+
+To uninstall a package first you need to remove it from the @world set, which basically tells the sysdtem that the package is no longer wanted. Once you've instructed the system that the package is no longer wanted you run a system cleanup through depclean which will see it's no longer needed and remove it.
+
+<code>emerge --deselect net-im/discord-bin</code> - remove discord-bin from @world
+
+<code>emerge --depclean -vp</code> - Run depclean to clean the system
+
+Depclean won't remove packages unless all required dependencies have been resolved, usually you ahve to run this command after:
+
+<code>emerge --update --newuse --deep --quiet @world</code>
+
+
+codeblocks
+inline code
+

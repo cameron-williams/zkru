@@ -1,4 +1,4 @@
-<id: 58ef9ea1-1092-4988-8e5d-b763464aee04>This is a test<title: Test>
+<id: 58ef9ea1-1092-4988-8e5d-b763464aee04>
 <title: Emerge>
 #gentoo #emerge #linux
 #package
@@ -12,7 +12,7 @@ Below are some important things to know about Emerge.
 
 
 
-## Package Licenses
+#### Package Licenses
 
 Since not all packages have the same license (proprietary stuff eg has license saying you can't use it for anything etc) emerge provides `/etc/portage/package.license`
 This file holds exceptions for licenses for specific packages you want to download. For example the `net-im/discord-bin` package requires the all-rights-reserved license, so before we can download it on our system we would have to add the following to the package.license file:
