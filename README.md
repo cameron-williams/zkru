@@ -1,4 +1,10 @@
-Zkru
+# !Immense Work in Progress!
+I am actively working on this, assume that anything and everything can and will change.
+
+
+
+
+# Zkru
 
 Zkru is a Zettelkasten tool. It takes a zettelkasten of notes (directory filled with .md files).
 
